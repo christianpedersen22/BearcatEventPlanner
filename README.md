@@ -6,4 +6,4 @@ The University of Cincinnati Event Planner allows university staff to create, ma
 
 ## Storyboard
 
-Attached is a link to the [storyboard]("docs/Storyboard.pdf")
+Attached is a link to the [storyboard](docs/Storyboard.pdf)
