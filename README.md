@@ -60,5 +60,59 @@ Attached is a link to the [storyboard](docs/Storyboard.pdf)
 
     * **Then** it will automatically send reminder emails or push notifications to all registered participants
 
+## Json Schema
+
+This is the schema we intend to output
+
+### Event
+> {
+>  "type": "object",
+> "properties": {
+>     "id": {"type": "integer"},
+>      "name": {"type": "string"},
+>      "description": {"type": "string"},
+>      "date": { "type": "string", "format": "date-time" },
+>       "capacity": {"type:" "integer"},
+>      "attendees": {
+>          "type": "array",
+>          "items": {"type": "integer"}
+>      },
+>      "organizer": {
+>          "type": "object",
+>         "properties": {
+>             "id": {"type": "integer"},
+>             "name": {"type": "string"}
+>          }
+>       }
+>   },
+   "required": ["id", "name", "date", "capacity", "organizer"]
+> }
+
+### User
+> {
+>  "type": "object",
+>  "properties": {
+>    "id": { "type": "integer" },
+>    "name": { "type": "string" },
+>    "email": { "type": "string", "format": "email" },
+>    "role": { "type": "string", "enum": ["student", "staff"] }
+>  },
+>  "required": ["id", "name", "email", "role"]
+> }
+
+### Registration 
+> {
+> "type": "object",
+> "properties": {
+>   "eventId": { "type": "integer" },
+>    "userId": { "type": "integer" },
+>    "status": { "type": "string", "enum": ["registered", "waitlisted"] },
+>    "registrationDate": { "type": "string", "format": "date-time" }
+>  },
+>  "required": ["eventId", "userId", "status"]
+> }
+
+
+
 
 
