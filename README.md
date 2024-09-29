@@ -111,7 +111,20 @@ This is the schema we intend to output
 >  },
 >  "required": ["eventId", "userId", "status"]
 > }
+>
+> 
+## Scrum Roles
 
+Product Owner
+Pederscn Christain 
+
+Scrum Master
+Kaas Logan
+
+Development Team
+Doersam Kyle 
+Aaron George
+Rome David
 
 
 
