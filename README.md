@@ -121,7 +121,7 @@ Product Owner
 * Works closely with stakeholders to define and prioritize product features.
 * Acts as the voice of the customer, making sure the product meets user needs.
 
-user: Pederscn Christain 
+User: Pederscn Christain 
 
 Scrum Master
 * Serves as a coach or facilitator for the Scrum team.
