@@ -116,27 +116,27 @@ This is the schema we intend to output
 ## Scrum Roles
 
 Product Owner
-Responsible for defining and managing the product backlog (list of work items).
-Ensures that the team is working on the most valuable features.
-Works closely with stakeholders to define and prioritize product features.
-Acts as the voice of the customer, making sure the product meets user needs.
+* Responsible for defining and managing the product backlog (list of work items).
+* Ensures that the team is working on the most valuable features.
+* Works closely with stakeholders to define and prioritize product features.
+* Acts as the voice of the customer, making sure the product meets user needs.
 
 user: Pederscn Christain 
 
 Scrum Master
-Serves as a coach or facilitator for the Scrum team.
-Helps the team follow Scrum practices and remove any impediments blocking progress.
-Ensures that the team adheres to Scrum principles and organizes the Scrum ceremonies (e.g., sprint planning, daily stand-ups, retrospectives).
-Helps improve team efficiency and collaboration.
+* Serves as a coach or facilitator for the Scrum team.
+* Helps the team follow Scrum practices and remove any impediments blocking progress.
+* Ensures that the team adheres to Scrum principles and organizes the Scrum ceremonies (e.g., sprint planning, daily stand-ups, retrospectives).
+*Helps improve team efficiency and collaboration.
 User: Kaas Logan
 
 Development Team
-A self-organizing, cross-functional group responsible for delivering the product increment at the end of each sprint.
-Typically includes developers, designers, testers, and other roles needed to build the product.
-Collaborates to achieve sprint goals and is accountable for the work delivered.
+* A self-organizing, cross-functional group responsible for delivering the product increment at the end of each sprint.
+* Typically includes developers, designers, testers, and other roles needed to build the product.
+* Collaborates to achieve sprint goals and is accountable for the work delivered.
 
-User:Doersam Kyle 
-User:Aaron George
+User: Doersam Kyle 
+User: Aaron George
 User: Rome David
 
 
