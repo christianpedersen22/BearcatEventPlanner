@@ -201,6 +201,6 @@ classDiagram
         +string comments
     }
 
-
-
+## Weekly Meeting Link (3pm every Sunday)
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzFhNDQxMGUtNzI0YS00YTVmLWFlODMtNTk0MzNkZjc3ZGM1%40thread.v2/0?context=%7b%22Tid%22%3a%22f5222e6c-5fc6-48eb-8f03-73db18203b63%22%2c%22Oid%22%3a%2205acd326-155f-4085-b0d1-9542f71eddda%22%7d
 
