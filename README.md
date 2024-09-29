@@ -142,6 +142,7 @@ User: Aaron George
 
 User: Rome David
 
+User: Damron Drake
 
 
 ## University Event Manager UML Class Diagram
