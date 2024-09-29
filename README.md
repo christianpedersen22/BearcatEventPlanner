@@ -128,6 +128,7 @@ Scrum Master
 * Helps the team follow Scrum practices and remove any impediments blocking progress.
 * Ensures that the team adheres to Scrum principles and organizes the Scrum ceremonies (e.g., sprint planning, daily stand-ups, retrospectives).
 *Helps improve team efficiency and collaboration.
+
 User: Kaas Logan
 
 Development Team
