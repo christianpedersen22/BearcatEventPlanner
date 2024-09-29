@@ -137,7 +137,9 @@ Development Team
 * Collaborates to achieve sprint goals and is accountable for the work delivered.
 
 User: Doersam Kyle 
+
 User: Aaron George
+
 User: Rome David
 
 
