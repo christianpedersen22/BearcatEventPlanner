@@ -138,7 +138,7 @@ Development Team
 
 User: Doersam Kyle 
 
-User: Aaron George
+User: George Aaron
 
 User: Rome David
 
