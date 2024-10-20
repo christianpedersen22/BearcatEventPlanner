@@ -3,17 +3,41 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.2</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.bearcat.eventplanner</groupId>
     <artifactId>bearcat-event-planner</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+    <name>Bearcat Event Planner</name>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
-        <!-- Add any dependencies here -->
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>msal4j</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+    </dependency>
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>azure-spring-boot-starter-active-directory</artifactId>
+            <version>3.6.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -23,8 +47,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -35,7 +59,6 @@
                     <mainClass>com.bearcat.eventplanner.App</mainClass>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
