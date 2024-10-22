@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        .dashboard-header{
+            position:relative;
+            text-align: center;
+            align-content: center;
+        }
+        .dashboard-header img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: auto;
+        }
+        .event-container{
+            max-width: 650px;
+            margin: 0 auto;
+            border: solid;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .create-event-btn{
+            position: relative;
+            display: block;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 15px;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <img src="logo.png" alt="logo">
+        <h1>Dash Board</h1>
+    </div>
+    <div class="event-container">
+        <h1>Today's Events</h1>
+        <div class="events-list">
+            <h3>Event 1</h3>
+            <!-- code events listed here -->
+            <h3>Event 2</h3>
+        </div>
+    </div>
+    <button type="button" class="create-event-btn">Create New Event</button>
+</body>
+</html>
