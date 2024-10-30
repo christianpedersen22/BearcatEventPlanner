@@ -17,7 +17,7 @@ public class EventListingScreen {
 
         JFrame frame = new JFrame("Bearcat Event Planner");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(600, 600);
 
 
         frame.setLayout(new BorderLayout());
