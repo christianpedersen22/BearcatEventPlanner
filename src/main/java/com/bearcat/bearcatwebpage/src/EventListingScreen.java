@@ -54,9 +54,11 @@ public class EventListingScreen {
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BorderLayout());
 
-
-        JLabel happeningTodayLabel = new JLabel("Happening Today", SwingConstants.CENTER);
-        centerPanel.add(happeningTodayLabel, BorderLayout.NORTH);
+        //label for the event list, since the list can be filtered by date it should change depending on the
+        // date filtered and not just be "happening today"
+        //change the "date" to your filtered date variable from the searchByDateButton
+        JLabel happeningOnDateLabel = new JLabel("Happening on:" + "date", SwingConstants.CENTER);
+        centerPanel.add(happeningOnDateLabel, BorderLayout.NORTH);
 
 
         eventListTextArea = new JTextArea();
