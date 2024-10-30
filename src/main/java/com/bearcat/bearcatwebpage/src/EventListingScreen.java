@@ -6,7 +6,7 @@ import java.util.List;
 public class EventListingScreen {
 
     private List<String> events;
-    private JTextArea eventTextArea;
+    private JTextArea eventListTextArea;
 
     public EventListingScreen() {
         events = new ArrayList<>();
@@ -59,10 +59,10 @@ public class EventListingScreen {
         centerPanel.add(happeningTodayLabel, BorderLayout.NORTH);
 
 
-        eventTextArea = new JTextArea();
-        updateEventTextArea();
-        eventTextArea.setEditable(false);
-        centerPanel.add(new JScrollPane(eventTextArea), BorderLayout.CENTER);
+        eventListTextArea = new JTextArea();
+        updateEventListTextArea();
+        eventListTextArea.setEditable(false);
+        centerPanel.add(new JScrollPane(eventListTextArea), BorderLayout.CENTER);
 
 
         frame.add(centerPanel, BorderLayout.CENTER);
@@ -71,12 +71,12 @@ public class EventListingScreen {
         frame.setVisible(true);
     }
 
-    private void updateEventTextArea() {
+    private void updateEventListTextArea() {
         StringBuilder eventList = new StringBuilder();
         for (String event : events) {
             eventList.append(event).append("\n");
         }
-        eventTextArea.setText(eventList.toString());
+        eventListTextArea.setText(eventList.toString());
     }
 
     public static void main(String[] args) {
