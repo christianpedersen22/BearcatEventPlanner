@@ -17,12 +17,12 @@ public class EventListingScreen {
         events.add("Event 3: Yet another event happening today.");
 
 
-        JFrame frame = new JFrame("Bearcat Event Planner");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        JFrame eventListingFrame = new JFrame("Bearcat Event Planner");
+        eventListingFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        eventListingFrame.setSize(400, 400);
 
 
-        frame.setLayout(new BorderLayout());
+        eventListingFrame.setLayout(new BorderLayout());
 
 
         JPanel topPanel = new JPanel();
@@ -50,7 +50,7 @@ public class EventListingScreen {
         topPanel.add(searchByLocationButton);
 
 
-        frame.add(topPanel, BorderLayout.NORTH);
+        eventListingFrame.add(topPanel, BorderLayout.NORTH);
 
 
         JPanel centerPanel = new JPanel();
@@ -67,10 +67,10 @@ public class EventListingScreen {
         centerPanel.add(new JScrollPane(eventTextArea), BorderLayout.CENTER);
 
 
-        frame.add(centerPanel, BorderLayout.CENTER);
+        eventListingFrame.add(centerPanel, BorderLayout.CENTER);
 
 
-        frame.setVisible(true);
+        eventListingFrame.setVisible(true);
     }
 
     private void updateEventTextArea() {
