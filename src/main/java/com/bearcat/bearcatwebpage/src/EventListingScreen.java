@@ -2,22 +2,25 @@ package com.bearcat.bearcatwebpage.src;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.SwingUtilities;
-import javax.swing.border.Border;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class EventListingScreen {
 
+    // Logging
+    private static final Logger logger = LogManager.getLogger("events");
+
+    // Lists
     private List<String> events; // all events list
     private List<String> categories; // used for searching by category
     private List<String> subCategories; // search even deeper through different categories. ie: Football > Flag Football
     private List<String> locations;
 
+    // Text Areas
     private JTextArea eventTextArea;
     private JTextArea locationsTextArea;
 
@@ -107,15 +110,19 @@ public class EventListingScreen {
 
 
     private void updateEventTextArea() {
+        logger.info("Reading events...");
         StringBuilder eventList = new StringBuilder();
         for (String event : events) {
             eventList.append(event).append("\n");
         }
 
         eventTextArea.setText(eventList.toString());
+
+        logger.info("New event added.");
+        logger.info("Event reading complete.");
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(EventListingScreen::new); 
+        SwingUtilities.invokeLater(EventListingScreen::new);
     }
 }
