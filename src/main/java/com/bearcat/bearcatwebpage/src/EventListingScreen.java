@@ -96,20 +96,13 @@ public class EventListingScreen {
 
     // navigating on button click
     private void OnClickHandlerSBC(WindowAdapter windowAdapter) {
-        JPanel topPanelCategories = new JPanel();
-        topPanelCategories.setLayout(new GridLayout(2, 3));
+        // implement a way for the user to click the
+        // deep search buttons to open new panels / frames
+        // to show different categories
+        //
+        // add subcategories to list for an even deeper search
+        // for the user in finding specifically hard to find events
 
-        JLabel eventsAroundMeLabel = new JLabel("Select a Category", SwingConstants.CENTER);
-        topPanelCategories.add(eventsAroundMeLabel);
-
-        topPanelCategories.add(new JLabel(""));
-
-        for (String category : categories) {
-            topPanelCategories.add(new JButton(category));
-        }
-
-        JPanel centerPanel = new JPanel();
-        centerPanel.setLayout(new BorderLayout());
     }
 
 
