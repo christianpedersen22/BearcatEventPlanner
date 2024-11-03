@@ -1,3 +1,5 @@
+package com.bearcat.bearcatwebpage.src;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,10 +17,19 @@ public class EventListingScreen {
         events.add("Event 3: Yet another event happening today.");
 
 
-        JFrame frame = new JFrame("Bearcat Event Planner");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
 
+
+
+        JFrame frame = new JFrame("Bearcat Event Planner");
+
+
+        Toolkit kit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = kit.getScreenSize();
+        int screenHeight = screenSize.height;
+        int screenWidth = screenSize.width;
+        frame.setSize(3*(screenWidth / 4), 3*(screenHeight / 4));
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.setLayout(new BorderLayout());
 
@@ -71,12 +82,22 @@ public class EventListingScreen {
         frame.setVisible(true);
     }
 
+
+
     private void updateEventTextArea() {
         StringBuilder eventList = new StringBuilder();
         for (String event : events) {
             eventList.append(event).append("\n");
         }
         eventTextArea.setText(eventList.toString());
+    }
+
+    public List<String> getEvents() {
+        return events;
+    }
+
+    public JTextArea getEventTextArea() {
+        return eventTextArea;
     }
 
     public static void main(String[] args) {
