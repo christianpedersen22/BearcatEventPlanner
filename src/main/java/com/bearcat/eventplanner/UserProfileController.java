@@ -5,16 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class UserProfileController {
 
-    @GetMapping("/")
+    @RequestMapping("/")
     public String home() {
         return "redirect:/profile";  // Redirect root URL to /profile
     }
 
-    @GetMapping("/profile")
+    @RequestMapping("/profile")
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
