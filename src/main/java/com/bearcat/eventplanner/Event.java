@@ -7,6 +7,16 @@ public class Event {
     private String location;
     private String description;
 
+    public Event(String title, String time, String date, String location, String description) {
+        this.title = title;
+        this.time = time;
+        this.date = date;
+        this.location = location;
+        this.description = description;
+    }
+    
+    public Event() {}
+
     public String getTitle() {return title;}
     public void setTitle(String title) {this.title = title;}
 

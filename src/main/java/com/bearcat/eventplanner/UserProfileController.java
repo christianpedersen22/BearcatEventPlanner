@@ -9,11 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 @Controller
 public class UserProfileController {
 
-    @GetMapping("/")
-    public String home() {
-        return "redirect:/profile";  // Redirect root URL to /profile
-    }
-
     @GetMapping("/profile")
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

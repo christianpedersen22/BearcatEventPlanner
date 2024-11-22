@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Create Event</title>
     <style>
         * {
             margin: 0;
@@ -12,26 +12,25 @@
         }
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f9;
+            height: 100vh;
+            margin: 0;
         }
         .container {
-            width: 90%;
-            max-width: 600px;
+            background: white;
             padding: 20px;
-            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            text-align: center;
+            width: 400px;
         }
         .logo {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
+            text-align: center;
+            margin-bottom: 20px;
         }
         /* Navbar Styling */
         .nav-bar {
@@ -59,41 +58,36 @@
             height: 2px;
             background-color: #007bff;
         }
-        h2 {
+        h1 {
             color: #333;
-            margin-bottom: 15px;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .event-container {
+        form {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
-        .event-card {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
+        label {
+            font-weight: bold;
             text-align: left;
         }
-        .event-card h3 {
-            margin-bottom: 5px;
-            font-size: 18px;
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
         }
-        .event-card p {
-            font-size: 14px;
-            color: #555;
-        }
-        .create-event-btn {
-            margin-top: 20px;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
+        button {
+            padding: 10px;
             border: none;
             border-radius: 4px;
-            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
         }
-        .create-event-btn:hover {
+        button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -103,27 +97,25 @@
         <div class="logo">Logo Placeholder</div>
 
         <div class="nav-bar">
-            <a href="/dashboard" class="active">Dashboard</a>
-            <a href="/create-event" class="">Create Event</a>
+            <a href="/dashboard" class="">Dashboard</a>
+            <a href="/create-event" class="active">Create Event</a>
             <a href="/profile" class="">User Profile</a>
         </div>
 
-        <h2>Today's Events</h2>
+        <h1>Create Event</h1>
 
-        <div class="event-container">
-            <div class="event-card">
-                <h3>Event 1</h3>
-                <p>Date: 2024-11-22</p>
-                <p>Description: This is a mock event.</p>
-            </div>
-            <div class="event-card">
-                <h3>Event 2</h3>
-                <p>Date: 2024-11-23</p>
-                <p>Description: Another example of an event listing.</p>
-            </div>
-        </div>
+        <form action="/create-event" method="post">
+            <label for="name">Event Name</label>
+            <input type="text" id="name" name="name" required>
 
-        <button class="create-event-btn">Create New Event</button>
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="description">Event Description</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Create Event</button>
+        </form>
     </div>
 </body>
 </html>
