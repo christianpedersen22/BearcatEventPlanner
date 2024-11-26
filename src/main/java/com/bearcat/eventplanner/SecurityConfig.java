@@ -21,22 +21,25 @@ public class SecurityConfig {
     public InMemoryUserDetailsManager userDetailsService() {
         // Create a default user with username "user" and password "password"
         UserDetails user = User.withUsername("user")
-            .password(passwordEncoder().encode("password"))
-            .roles("USER")
-            .build();
+                .password(passwordEncoder().encode("password"))
+                .roles("USER")
+                .build();
         return new InMemoryUserDetailsManager(user);
     }
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-        .authorizeHttpRequests(auth -> auth
-            .anyRequest().authenticated()
-        )
-        .formLogin(withDefaults()) 
-        .logout(withDefaults());    
-    
-    
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/login", "/css/**", "/js/**").permitAll() // Allow public access to login and static resources
+                        .anyRequest().authenticated() // Secure all other requests
+                )
+                .formLogin(form -> form
+                        .loginPage("/login") // Custom login page
+                        .defaultSuccessUrl("/dashboard", true) // Redirect to dashboard after successful login
+                        .permitAll()
+                );
+
         return http.build();
     }
 
