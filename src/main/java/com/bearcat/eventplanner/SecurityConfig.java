@@ -10,8 +10,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import static org.springframework.security.config.Customizer.withDefaults;
-
 
 @Configuration
 @EnableWebSecurity
@@ -32,12 +30,16 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login", "/css/**", "/js/**").permitAll() // Allow public access to login and static resources
+                        .requestMatchers("/create-event").permitAll() // Allow public access to /create-event
                         .anyRequest().authenticated() // Secure all other requests
                 )
                 .formLogin(form -> form
                         .loginPage("/login") // Custom login page
                         .defaultSuccessUrl("/dashboard", true) // Redirect to dashboard after successful login
                         .permitAll()
+                )
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/create-event") // Disable CSRF protection for /create-event if necessary
                 );
 
         return http.build();

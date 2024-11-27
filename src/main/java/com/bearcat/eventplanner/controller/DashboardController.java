@@ -34,7 +34,7 @@ public class DashboardController {
             @RequestParam String description) {
         Event event = new Event(title, time, date, location, description);
         events.add(event);
-        return "redirect:/dashboard"; 
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/events")

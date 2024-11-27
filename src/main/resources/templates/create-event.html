@@ -104,17 +104,25 @@
         <h1>Create Event</h1>
 
         <form action="/create-event" method="post">
-            <label for="name">Event Name</label>
-            <input type="text" id="name" name="name" required>
-
+            <label for="title">Event Name</label>
+            <input type="text" id="title" name="title" required>
+        
+            <label for="time">Event Time</label>
+            <input type="time" id="time" name="time" required>
+        
             <label for="date">Event Date</label>
             <input type="date" id="date" name="date" required>
-
+        
+            <label for="location">Event Location</label>
+            <input type="text" id="location" name="location" required>
+        
             <label for="description">Event Description</label>
             <textarea id="description" name="description" rows="4" required></textarea>
-
+        
             <button type="submit">Create Event</button>
         </form>
+        
+        
     </div>
 </body>
 </html>
