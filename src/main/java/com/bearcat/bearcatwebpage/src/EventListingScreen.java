@@ -8,7 +8,7 @@ import java.util.List;
 public class EventListingScreen {
 
     private List<String> events;
-    private JTextArea eventTextArea;
+    private JTextArea eventListTextArea;
 
     public EventListingScreen() {
         events = new ArrayList<>();
@@ -19,7 +19,7 @@ public class EventListingScreen {
 
         JFrame frame = new JFrame("Bearcat Event Planner");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(600, 600);
 
 
         frame.setLayout(new BorderLayout());
@@ -56,15 +56,17 @@ public class EventListingScreen {
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BorderLayout());
 
+        //label for the event list, since the list can be filtered by date it should change depending on the
+        // date filtered and not just be "happening today"
+        //change the "date" to your filtered date variable from the searchByDateButton
+        JLabel happeningOnDateLabel = new JLabel("Happening on:" + "date", SwingConstants.CENTER);
+        centerPanel.add(happeningOnDateLabel, BorderLayout.NORTH);
 
-        JLabel happeningTodayLabel = new JLabel("Happening Today", SwingConstants.CENTER);
-        centerPanel.add(happeningTodayLabel, BorderLayout.NORTH);
 
-
-        eventTextArea = new JTextArea();
-        updateEventTextArea();
-        eventTextArea.setEditable(false);
-        centerPanel.add(new JScrollPane(eventTextArea), BorderLayout.CENTER);
+        eventListTextArea = new JTextArea();
+        updateEventListTextArea();
+        eventListTextArea.setEditable(false);
+        centerPanel.add(new JScrollPane(eventListTextArea), BorderLayout.CENTER);
 
 
         frame.add(centerPanel, BorderLayout.CENTER);
@@ -73,12 +75,12 @@ public class EventListingScreen {
         frame.setVisible(true);
     }
 
-    private void updateEventTextArea() {
+    private void updateEventListTextArea() {
         StringBuilder eventList = new StringBuilder();
         for (String event : events) {
             eventList.append(event).append("\n");
         }
-        eventTextArea.setText(eventList.toString());
+        eventListTextArea.setText(eventList.toString());
     }
 
     public static void main(String[] args) {
